@@ -5,6 +5,7 @@
 ;;; codes are revised for Common Lisp loop macros. 
 
 (cl:defpackage :utils
+  (:use :cl)
   (:export deletef reuse-cons mklist length>1 length=1 last1 make-exp mappend concat-symbol
            op args arg1 arg2 starts-with stringify true print-repeated 
            same-element-p unfiablly-same-type-p length-in-1diff

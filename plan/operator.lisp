@@ -65,9 +65,9 @@
   "prints <operator> such as ''(operator <name> <comment> (:precond <precond>) (:effects <effects>)''."
   (declare (ignore depth))
   (cond ((eq (operator-symbol x) 'start)
-         (format stream "~<(start~;~:1I~{ ~W~:_~}~;)~:>" (list (operator-effects x))))
+         (format stream "~<(start~;~1:I~{ ~W~:_~}~;)~:>" (list (operator-effects x))))
         ((eq (operator-symbol x) 'finish)
-         (format stream "~<(finish~;~:1I~{ ~W~:_~}~;)~:>" (list (operator-precond x))))
+         (format stream "~<(finish~;~1:I~{ ~W~:_~}~;)~:>" (list (operator-precond x))))
         ((operator-comment x)
          (format stream "~<(operator ~;~W ~_~:I~W ~_~W ~_~W~;)~:>"
            (list (operator-name x) (operator-comment x)

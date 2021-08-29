@@ -14,11 +14,15 @@
 ;; 2007.05.04    File created, copied from Paul Graham's 'On Lisp' by hand
 
 (cl:defpackage :callcc
+  (:use :cl)
   (:export =lambda =defun =bind =values =funcall =apply
            choose choose-bind fail)
   )
 
 (in-package :callcc)
+
+(defvar *cont*)
+(defvar *saved*)
 
 (declaim (special *cont* *saved*))
 

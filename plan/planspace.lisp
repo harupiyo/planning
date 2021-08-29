@@ -69,7 +69,7 @@
   "prints <plan> like ''(plan operator* (:orderings ordering*) (:bindigns binding*)
    (:causal-links causal-link*)''"
   (declare (ignore depth))
-  (format stream "~<(plan~;~:1I~{ ~W~_~}~@[ (:orderings~:1I~{ ~W~:_~}) ~]~I~_~@[ (:bindings~:1I~{ ~W~:_~})~]~I~_~@[ (:causal-links~:1I~{ ~W~:_~})~]~;)~:>"
+  (format stream "~<(plan~;~1:I~{ ~W~_~}~@[ (:orderings~1:I~{ ~W~:_~}) ~]~I~_~@[ (:bindings~1:I~{ ~W~:_~})~]~I~_~@[ (:causal-links~1:I~{ ~W~:_~})~]~;)~:>"
       (list (plan-operators x) (plan-orderings x) (plan-bindings x) (plan-causal-links x))))
 
 (defun plan (operators orderings bindings causal-links)
